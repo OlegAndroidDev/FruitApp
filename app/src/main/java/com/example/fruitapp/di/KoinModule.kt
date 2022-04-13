@@ -1,8 +1,4 @@
 package com.example.fruitapp.di
-
-import android.content.Context
-import android.util.Log
-import androidx.room.Room
 import com.example.fruitapp.repository.FruitApiRepository
 import com.example.fruitapp.repository.FruitApiRepositoryImpl
 import com.example.fruitapp.rest.FruitApi

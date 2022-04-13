@@ -16,7 +16,6 @@ class FruitApiRepositoryImpl(
             try {
                 val response = fruitApi.getFruits(selected_path)
                 if (response.isSuccessful) {
-                    Log.d("*********Fruit", "TEst")
                     response.body()?.let {
                         emit(ResultState.SUCCESS(it))
                     }?: throw Exception("Response is Null")
@@ -34,7 +33,6 @@ class FruitApiRepositoryImpl(
         return fruitApi.getFruitByName(name_path)
     }
 }
-
 
 interface FruitApiRepository {
 fun getFruits(

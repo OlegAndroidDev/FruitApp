@@ -40,7 +40,6 @@ class FruitViewModel(
             try {
                 val response = fruitApiRepository.getFruitByName(selected_root)
                 if (response.isSuccessful) {
-                    Log.d("*********Fruit by Name", "TEst")
                     response.body()?.let {
                         _fruitMutable.postValue(ResultState.SUCCESS(it))
                     }?: throw Exception("Response is Null")

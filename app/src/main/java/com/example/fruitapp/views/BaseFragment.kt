@@ -13,7 +13,6 @@ open class BaseFragment : Fragment() {
 
     protected val fruitAdapter by lazy {
         FruitAdapter(onFruitClicked = {
-//            fruitViewModel.fruitLiveData = it
             fruitViewModel.fruitItem = it
             findNavController().navigate(R.id.detailsFragment)
         })

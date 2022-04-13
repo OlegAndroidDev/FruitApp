@@ -52,11 +52,6 @@ class FindFragment : BaseFragment() {
     fun handleState(state: ResultState){
         fruitViewModel.fruitLiveData.observe(viewLifecycleOwner) { state ->
             when(state) {
-//                is ResultState.LOADING -> {
-//                    Toast.makeText(
-//                        requireContext(), "Loading Fruit Details....", Toast.LENGTH_SHORT
-//                    ).show()
-//                }
                 is ResultState.SUCCESS<*> -> {
 
                     val fruit = state.fruits as Fruit

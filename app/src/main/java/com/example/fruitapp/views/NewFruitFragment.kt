@@ -15,10 +15,6 @@ class NewFruitFragment : BaseFragment() {
         FragmentFruitBinding.inflate(layoutInflater)
     }
 
-//    private val fruitAdapter by lazy {
-//        FruitAdapter()
-//    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
