@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.FindFragment"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:id="@+id/txt_titleLayout"
+        android:layout_width="388dp"
+        android:layout_height="74dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgFruits"
+            android:layout_width="112dp"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@id/txt_title"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/fruits" />
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="249dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/imgFruits"
+            android:layout_weight="5"
+            android:paddingTop="12dp"
+            android:text="@string/fruit_fragment_title"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_namefrag_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
+        android:text="@string/lbl_name_title"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_titleLayout" />
+
+    <EditText
+        android:id="@+id/edit_Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_namefrag_title"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/lbl_namefrag_instruction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_namefrag_instruction"
+        android:textSize="15sp"
+        android:textStyle="bold|italic"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_Name" />
+
+
+    <TextView
+        android:id="@+id/nutrition_text"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginTop="28dp"
+        android:padding="1dp"
+        android:text="@string/lbl_nutrition_text"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fruit_family_txt" />
+
+    <TextView
+        android:id="@+id/fruit_item_text"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginTop="32dp"
+        android:padding="1dp"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="@string/fruit_details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_namefrag_instruction" />
+
+
+    <TextView
+        android:id="@+id/fruit_ginus_value"
+        android:layout_width="70dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:padding="2dp"
+        android:textColor="@color/design_default_color_error"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@+id/fruit_ginus_txt"
+        app:layout_constraintTop_toBottomOf="@+id/fruit_item_text" />
+
+    <TextView
+        android:id="@+id/fruit_ginus_txt"
+        android:layout_width="70dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:padding="2dp"
+        android:text="@string/txt_genus"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fruit_item_text" />
+
+    <TextView
+        android:id="@+id/fruit_family_value"
+        android:layout_width="70dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:padding="2dp"
+        android:textColor="@color/design_default_color_error"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@+id/fruit_family_txt"
+        app:layout_constraintTop_toBottomOf="@+id/fruit_item_text" />
+
+    <TextView
+        android:id="@+id/fruit_family_txt"
+        android:layout_width="70dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="28dp"
+        android:padding="2dp"
+        android:text="@string/txt_family"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@+id/fruit_ginus_value"
+        app:layout_constraintTop_toBottomOf="@+id/fruit_item_text" />
+
+    <TextView
+        android:id="@+id/txt_fruit_carbohydrate_value"
+        android:layout_width="70dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        android:padding="2dp"
+        android:textColor="@color/design_default_color_error"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@+id/txt_fruit_carbohydrates"
+        app:layout_constraintTop_toBottomOf="@+id/nutrition_text" />
+
+    <TextView
+        android:id="@+id/txt_fruit_carbohydrates"
+        android:layout_width="88dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:padding="2dp"
+        android:text="carbohydrates:"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nutrition_text" />
+
+    <TextView
+        android:id="@+id/txt_fruit_protein_value"
+        android:layout_width="70dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:padding="2dp"
+        android:textColor="@color/design_default_color_error"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@+id/txt_fruit_protein"
+        app:layout_constraintTop_toBottomOf="@+id/nutrition_text" />
+
+    <TextView
+        android:id="@+id/txt_fruit_protein"
+        android:layout_width="70dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"
+        android:padding="2dp"
+        android:text="protein:"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@+id/txt_fruit_carbohydrate_value"
+        app:layout_constraintTop_toBottomOf="@+id/nutrition_text" />
+
+    <TextView
+        android:id="@+id/txt_fruit_fat_value"
+        android:layout_width="70dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:padding="2dp"
+        android:textColor="@color/design_default_color_error"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@+id/txt_fruit_fat"
+        app:layout_constraintTop_toBottomOf="@+id/txt_fruit_carbohydrate_value" />
+
+    <TextView
+        android:id="@+id/txt_fruit_fat"
+        android:layout_width="88dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:padding="2dp"
+        android:text="fat:"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_fruit_carbohydrates" />
+
+    <TextView
+        android:id="@+id/txt_fruit_calories_value"
+        android:layout_width="70dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:padding="2dp"
+        android:textColor="@color/design_default_color_error"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@+id/txt_fruit_calories"
+        app:layout_constraintTop_toBottomOf="@+id/txt_fruit_protein_value" />
+
+    <TextView
+        android:id="@+id/txt_fruit_calories"
+        android:layout_width="70dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
+        android:padding="2dp"
+        android:text="calories:"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@+id/txt_fruit_fat_value"
+        app:layout_constraintTop_toBottomOf="@+id/txt_fruit_protein" />
+
+    <Button
+        android:id="@+id/btn_Search"
+        android:layout_width="190dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/design_default_color_primary"
+        android:text="@string/search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

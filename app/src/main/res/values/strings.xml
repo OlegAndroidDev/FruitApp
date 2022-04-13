@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">FruitApp</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fruit_fragment_title">Fruityvice</string>
+    <string name="txt_genus">genus:</string>
+    <string name="txt_family">family:</string>
+    <string name="list">List</string>
+    <string name="search">Search</string>
+    <string name="add_fruit">New</string>
+
+    <string name="lbl_name_title">SEARCH FRUIT BY NAME</string>
+    <string name="fruit_details">Info</string>
+    <string name="lbl_namefrag_instruction">Please enter the fruit name to see full details.</string>
+    <string name="lbl_nutrition_text">nutrition details</string>
+    <string name="btn_back_text">Back</string>
+
+</resources>

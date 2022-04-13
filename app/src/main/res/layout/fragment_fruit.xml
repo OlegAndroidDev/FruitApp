@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+tools:context="views.FruitFragment"
+android:padding="10dp">
+
+    <RelativeLayout
+        android:id="@+id/txt_titleLayout"
+        android:layout_width="388dp"
+        android:layout_height="74dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgFruits"
+            android:layout_width="112dp"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@id/txt_title"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/fruits" />
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="249dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="12dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/imgFruits"
+            android:layout_weight="5"
+            android:text="@string/fruit_fragment_title"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fruitRecycler"
+        android:layout_width="388dp"
+        android:layout_height="537dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.253"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_titleLayout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
